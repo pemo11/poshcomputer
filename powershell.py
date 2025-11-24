@@ -2,6 +2,7 @@ from typing import Any, Dict, List
 import re
 import subprocess
 import platform
+import os
 
 from config import Config
 
@@ -145,7 +146,7 @@ class PowerShell:
                 capture_output=True,
                 text=True,
                 timeout=30,  # 30 second timeout for safety
-                env={**subprocess.os.environ, 'NO_COLOR': '1'}  # Disable color output
+                env={**os.environ, 'NO_COLOR': '1'}  # Disable color output
             )
             
             stderr = result.stderr.strip()
