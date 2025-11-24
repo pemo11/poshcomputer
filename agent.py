@@ -10,7 +10,7 @@ import json
 import os
 import subprocess
 import sys
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple, Any
 from dotenv import load_dotenv
 from openai import OpenAI
 
@@ -79,7 +79,7 @@ class PowerShellAgent:
         # Check if it's in the allowed list
         return cmdlet in self.config['restricted_commands']
     
-    def _validate_command(self, command: str) -> tuple[bool, str]:
+    def _validate_command(self, command: str) -> Tuple[bool, str]:
         """Validate a PowerShell command for safety.
         
         Args:
@@ -110,7 +110,7 @@ class PowerShellAgent:
         
         return True, ""
     
-    def execute_powershell(self, command: str) -> Dict[str, any]:
+    def execute_powershell(self, command: str) -> Dict[str, Any]:
         """Execute a PowerShell command safely.
         
         Args:
@@ -208,7 +208,7 @@ If the request cannot be fulfilled with the allowed commands, respond with "CANN
             print(f"Error interpreting request: {e}", file=sys.stderr)
             return None
     
-    def process_request(self, user_request: str) -> Dict[str, any]:
+    def process_request(self, user_request: str) -> Dict[str, Any]:
         """Process a natural language request end-to-end.
         
         Args:
