@@ -1,0 +1,8 @@
+# Dependencies for the PowerShell Natural Language Agent
+# LLM and AI libraries
+openai>=1.0.0
+# HTTP requests
+requests>=2.31.0
+# Configuration management
+python-dotenv>=1.0.0
+# JSON handling is built-in

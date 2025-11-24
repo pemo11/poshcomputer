@@ -1,0 +1,28 @@
+{
+  "restricted_commands": [
+    "Get-Process",
+    "Get-Service",
+    "Get-Item",
+    "Get-ChildItem",
+    "Get-Content",
+    "Get-Location",
+    "Get-Date",
+    "Get-ComputerInfo",
+    "Get-Disk",
+    "Get-Volume",
+    "Get-NetAdapter",
+    "Get-NetIPAddress",
+    "Test-Connection",
+    "Test-Path",
+    "Select-Object",
+    "Where-Object",
+    "Sort-Object",
+    "Measure-Object",
+    "Format-Table",
+    "Format-List",
+    "Out-String"
+  ],
+  "nemotron_model": "nvidia/nemotron-mini-4b-instruct",
+  "max_tokens": 500,
+  "temperature": 0.7
+}
