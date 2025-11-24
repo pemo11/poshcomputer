@@ -63,6 +63,18 @@ The agent restricts execution to safe, read-only cmdlets:
 
 ## Usage
 
+### Demo Mode (No API Key Required)
+
+To see the agent in action without an API key, run the demo script:
+```bash
+python demo.py
+```
+
+This demonstrates:
+- Command validation and execution
+- Security features blocking dangerous commands
+- Example requests and responses
+
 ### Interactive Mode
 
 Run the agent without arguments for interactive mode:
