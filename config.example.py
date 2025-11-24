@@ -4,16 +4,30 @@ from dataclasses import dataclass, field
 @dataclass
 class Config:
     """
-    Configuration class for the application.
+    Example configuration class for the PowerShell Computer Use Agent.
+    
+    Copy this file to config.py and update with your actual values.
     """
 
     # -------------------------------------
     # LLM configuration
     #--------------------------------------
 
+    # Example configuration for build.nvidia.com
     llm_base_url: str = "https://integrate.api.nvidia.com/v1"
     llm_model_name: str = "nvidia/nvidia-nemotron-nano-9b-v2"
-    llm_api_key: str = "(replace with your key, not needed for local models)"
+    llm_api_key: str = "nvapi-YOUR-API-KEY-HERE"
+    
+    # Example configuration for OpenAI
+    # llm_base_url: str = "https://api.openai.com/v1"
+    # llm_model_name: str = "gpt-4"
+    # llm_api_key: str = "sk-YOUR-API-KEY-HERE"
+    
+    # Example configuration for local LLM (no API key needed)
+    # llm_base_url: str = "http://localhost:8000/v1"
+    # llm_model_name: str = "local-model"
+    # llm_api_key: str = "not-needed"
+    
     # Sampling parameters (we've reduced the temperature to make the model more deterministic)
     llm_temperature: float = 0.1
     llm_top_p: float = 0.95
